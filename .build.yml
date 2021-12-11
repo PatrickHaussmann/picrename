@@ -1,6 +1,13 @@
 image: alpine/edge
+packages:
+  - python3-dev
+  - chrpath
+  - py3-pip
 tasks:
   - build: |
+      cd picrename
+      PATH=$PATH:~/.local/bin/
+      pip3 install nuitka3
       ./build.sh
   - list: |
       ls -al
