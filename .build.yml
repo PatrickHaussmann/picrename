@@ -1,0 +1,6 @@
+image: alpine/edge
+tasks:
+  - build: |
+      ./build.sh
+  - list: |
+      ls -al
